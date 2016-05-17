@@ -1,0 +1,46 @@
+# Temporary Files
+#---------------------------
+tmp/
+*.swp
+
+# Log files
+#---------------------------
+*.log*
+
+# Backup files
+#---------------------------
+*.bak
+*.bk
+*.orig
+*~
+*.old
+old/
+_old/
+
+# OS dependent files
+#---------------------------
+.DS_Store
+Thumbs.db
+
+# Key files
+#---------------------------
+*.pem
+id_rsa
+id_rsa.pub
+
+# Env files
+#---------------------------
+.envrc
+
+# Basic No upload files
+#---------------------------
+*.xls*
+*.xlk
+*.doc*
+*.ppt*
+~$*
+
+# Custom No upload files
+#---------------------------
+*.retry
+

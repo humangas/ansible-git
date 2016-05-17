@@ -1,0 +1,10 @@
+---
+# curl https://github.com/git/git/archive/v2.8.2.tar.gz
+# <html><body>You are being <a href="https://codeload.github.com/git/git/tar.gz/v2.8.2">redirected</a>.</body></html>
+# curl https://codeload.github.com/git/git/tar.gz/v2.8.2 | tar xz
+#download_url: "https://codeload.github.com/git/git/tar.gz/v2.8.2"
+
+download_url: "https://codeload.github.com/git/git/tar.gz/v"
+git_version: "2.8.2"
+git_install_path: "/usr/local"
+

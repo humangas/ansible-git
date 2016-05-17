@@ -1,0 +1,10 @@
+---
+yum_packages:
+  - name: curl-devel
+  - name: expat-devel
+  - name: gettext-devel
+  - name: openssl-devel 
+  - name: zlib-devel 
+  - name: gcc
+  - name: perl-ExtUtils-MakeMaker
+

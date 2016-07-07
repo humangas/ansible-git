@@ -14,7 +14,7 @@
   debug: var=git_installed_version
 
 - name: download git.tar.gz
-  get_url: url={{ download_url }}{{ git_version }} dest=/tmp/git.tar.gz force=True
+  get_url: url={{ download_url }}{{ git_version }} dest=/tmp/git.tar.gz force=True validate_certs=no
 #  when: git_installed_version | failed
 
 - name: unarchive git.tar.gz

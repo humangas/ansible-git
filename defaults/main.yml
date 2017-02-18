@@ -1,5 +1,5 @@
 ---
 download_url: "https://codeload.github.com/git/git/tar.gz/v"
-git_version: "2.9.0"
+git_version: "2.11.1"
 git_install_path: "/usr/local"
 

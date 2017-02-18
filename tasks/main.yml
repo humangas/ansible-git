@@ -1,6 +1,7 @@
 ---
 - name: Install yum packages
   yum: name={{ item.name }} state={{ item.state | default('latest') }}
+  become: true
   with_items:
     - "{{ yum_packages }}"
 
@@ -23,9 +24,10 @@
 
 - name: Make 
   command: make prefix={{ git_install_path }} all chdir=/tmp/git-{{ git_version }}
+  become: true
 #  when: git_installed_version | failed
 
 - name: Make install
   command: make prefix={{ git_install_path }} install chdir=/tmp/git-{{ git_version }}
-  become: yes
+  become: true
 #  when: git_installed_version | failed

@@ -1,32 +1,31 @@
 ---
-- name: install yum packages
+- name: Install yum packages
   yum: name={{ item.name }} state={{ item.state | default('latest') }}
   with_items:
     - "{{ yum_packages }}"
 
-- name: installed git version
+- name: Installed git version
   command: git --version
   changed_when: false
   failed_when: false
   register: git_installed_version
 
-- name: debug installed git version
+- name: Debug installed git version
   debug: var=git_installed_version
 
-- name: download git.tar.gz
+- name: Download git.tar.gz
   get_url: url={{ download_url }}{{ git_version }} dest=/tmp/git.tar.gz force=True validate_certs=no
 #  when: git_installed_version | failed
 
-- name: unarchive git.tar.gz
+- name: Unarchive git.tar.gz
   unarchive: src=/tmp/git.tar.gz dest=/tmp/git-{{ git_version }} copy=no
 #  when: git_installed_version | failed
 
-- name: make 
+- name: Make 
   command: make prefix={{ git_install_path }} all chdir=/tmp/git-{{ git_version }}
 #  when: git_installed_version | failed
 
-- name: make install
+- name: Make install
   command: make prefix={{ git_install_path }} install chdir=/tmp/git-{{ git_version }}
   become: yes
 #  when: git_installed_version | failed
-

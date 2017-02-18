@@ -4,7 +4,7 @@ python: "2.7"
 sudo: true
 install:
     - pip install ansible 
-    - "echo '[defaults]\nroles_path = ../' > ansible.cfg"
+    - echo '[defaults]\nroles_path = ../' > ansible.cfg
 script:
     - ansible-playbook -i tests/hosts tests/test.yml --syntax-check
     - ansible-playbook -i tests/hosts tests/test.yml --connection=local
